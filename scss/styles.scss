@@ -1,0 +1,49 @@
+@import "libraries/mixins";
+
+
+body {
+  display: flex;
+  justify-content:space-between;
+}
+
+.pip {
+  @extend %pip;
+}
+.column {
+  @extend %column;
+}
+
+.first-face {
+  @extend %dice;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-face {
+  @extend %dice;
+  .pip:nth-child(2) {
+    align-self: flex-end;
+  }
+}
+.third-face {
+  @extend %dice;
+  .pip:nth-child(2) {
+    align-self: center;
+  }
+  .pip:nth-child(3) {
+    align-self: flex-end;
+  }
+}
+.fourth-face {
+  @extend %dice;
+}
+
+.fifth-face {
+  @extend %dice;
+  .column:nth-child(2) {
+    justify-content: center;
+  }
+}
+.sixth-face {
+  @extend %dice;
+  }
